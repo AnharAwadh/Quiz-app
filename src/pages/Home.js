@@ -8,6 +8,7 @@ export default function HomePage(props) {
 
   useEffect(() => {
     props.setName("");
+    props.setScore(0);
   }, []);
 
   const getQuestions = function () {

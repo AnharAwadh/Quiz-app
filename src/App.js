@@ -27,6 +27,7 @@ function App() {
               <HomePage
                 name={name}
                 setName={setName}
+                setScore={setScore}
                 setCatagoryValue={setCatagoryValue}
                 catagoryValue={catagoryValue}
                 setDifficultyValue={setDifficultyValue}
