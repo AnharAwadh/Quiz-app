@@ -25,21 +25,27 @@ export default function QuizPage(props) {
     if (answerIsSelected) {
       if (ans == current["correct_answer"]) {
         return (
-          <button key={ans} className="btn btn-success">
-            {ans}
-          </button>
+          <button
+            key={ans}
+            className="btn btn-success"
+            dangerouslySetInnerHTML={{ __html: ans }}
+          ></button>
         );
       } else if (answerSelected == ans && ans != current["correct_answer"]) {
         return (
-          <button key={ans} className="btn btn-danger">
-            {ans}
-          </button>
+          <button
+            key={ans}
+            className="btn btn-danger"
+            dangerouslySetInnerHTML={{ __html: ans }}
+          ></button>
         );
       } else {
         return (
-          <button key={ans} className="btn btn-light">
-            {ans}
-          </button>
+          <button
+            key={ans}
+            className="btn btn-light"
+            dangerouslySetInnerHTML={{ __html: ans }}
+          ></button>
         );
       }
     } else {
@@ -48,9 +54,8 @@ export default function QuizPage(props) {
           key={ans}
           onClick={() => selectedAnswer(ans)}
           className="btn btn-light"
-        >
-          {ans}
-        </button>
+          dangerouslySetInnerHTML={{ __html: ans }}
+        ></button>
       );
     }
   };
